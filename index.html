@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify_clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="/AssestsCopy/logo.png " alt="spotify">Spotify</li>
+            <li>Home</li>
+            <li>Search</li>
+            <li>About</li>
+
+        </ul>
+    </nav>
+
+    <audio>
+        <source src="/AssestsCopy/1.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+    <div id="Default">
+    </div>
+    <div class="dynamicColor"></div>
+
+    <div class="Hero">
+        <div class="container">
+
+            <h1>Be the Voice, not an echo!</h1>
+            <div class="volBar">
+                <i class="fa-solid fa-2x fa-volume-xmark"></i>
+                <span class="percent">0%</span>
+                <div class="progress"><div></div></div>
+            </div>
+
+            <div class="songList">
+                <div class="songItemContainer">
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Song_1</span>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="0"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="2">
+                        <span class="songName">Song_2</span>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="1"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="3">
+                        <span class="songName">Song_3</span>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="2"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="4">
+                        <span class="songName">Song_4</span>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="3"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="5">
+                        <span class="songName">Song_5</span>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="4"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="6">
+                        <span class="songName">Song_6</span>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="5"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="7">
+                        <span class="songName">Song_7</span>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="6"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="8">
+                        <span class="songName">Song_8</span>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="7"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="9">
+                        <span class="songName">Song_9</span>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="8"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="10">
+                        <span class="songName">Song_10</span>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="9"></i></span>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="knobContainer">
+            <div class="knob"></div>
+        </div>
+
+    </div>
+
+
+
+    <div class="bottom">
+        <div class="progressBarBox">
+            <input type="range" name="range" id="myProgressBar" min="0" max="100" value="0">
+        </div>
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fas fa-2x fa-step-backward" id="prev"></i>
+            <i class="fas fa-2x fa-play-circle" id="play"></i>
+            <i class="fas fa-2x fa-step-forward" id="next"></i>
+        </div>
+        <div class="songInfo">
+            <img src="/AssestsCopy/playing.gif" alt="playing" width=100px height="15px" id="gif">
+
+            <span id="masterSongName">Song Name</span>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/54b6994b08.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

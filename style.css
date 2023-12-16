@@ -349,12 +349,13 @@ nav ul li {
 
 @media only screen and (max-width: 650px) {
     nav{
-        background-color: red;
+        /* background-color: red; */
         height: 8vh;
     }
     .container {
         width: 90%;
         margin: auto;
+        height: 60vh;
     }
     .container h1 {
         font-size: 1.5rem;
@@ -371,6 +372,9 @@ nav ul li {
 
     .bottom {
         height: 20vh;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 
     .bottom .icons {

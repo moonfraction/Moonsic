@@ -14,8 +14,8 @@ let currSongImg = document.getElementById('Default');
 let songs = [
     { songName: 'Perfect- Ed Sheeran', filePath: 'Assets/songs/1.mp3', coverPath: 'Assets/Cover/1.jpg', bgPath:'Assets/Bg/1.jpg' },
     { songName: 'See You Again- Charlie Puth', filePath: 'Assets/songs/2.mp3', coverPath: 'Assets/Cover/2.jpg', bgPath:'Assets/Bg/2.jpg' },
-    { songName: 'Until I Found You', filePath: 'Assets/songs/3.mp3', coverPath: 'Assets/Cover/3.jpeg', bgPath:'Assets/Bg/3.jpg' },
-    { songName: 'Lover- Taylor Swift', filePath: 'Assets/songs/4.mp3', coverPath: 'Assets/Cover/4.jpg', bgPath:'Assets/Bg/4.webp' },
+    { songName: 'Until I Found You', filePath: 'Assets/songs/3.mp3', coverPath: 'Assets/Cover/3.jpg', bgPath:'Assets/Bg/3.jpg' },
+    { songName: 'Lover- Taylor Swift', filePath: 'Assets/songs/4.mp3', coverPath: 'Assets/Cover/4.jpg', bgPath:'Assets/Bg/4.jpg' },
     { songName: 'Paris- The Chainsmokers', filePath: 'Assets/songs/5.mp3', coverPath: 'Assets/Cover/5.jpg', bgPath:'Assets/Bg/5.jpg' },
     { songName: 'What makes you Beautiful- 1D', filePath: 'Assets/songs/6.mp3', coverPath: 'Assets/Cover/6.jpg', bgPath:'Assets/Bg/6.jpg' },
     { songName: 'iPad- The Chainsmokers', filePath: 'Assets/songs/7.mp3', coverPath: 'Assets/Cover/7.jpg', bgPath:'Assets/Bg/7.jpg' },

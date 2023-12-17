@@ -228,7 +228,11 @@ nav ul li {
     justify-content: space-evenly;
     box-shadow: #d7cfcf 0 0 100px 5px;
 
-    /* opacity: 0.2; */
+    opacity: 0.3;
+    transition: opacity 0.2s ease-in-out;
+}
+.bottom:hover {
+    opacity: 1;
 }
 
 
@@ -267,6 +271,17 @@ nav ul li {
     background: linear-gradient(to right, #FFC436, #337CCF, #1450A3, #191D88);
 }
 
+#myProgressBar::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #e5c305;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    border: 1.5px solid blue;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.2);
+}
 
 
 .icons {

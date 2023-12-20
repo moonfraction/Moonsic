@@ -13,32 +13,36 @@
 
     <!-- NAVBAR -->
     <nav>
+        <li class="brand"><img src="Assets/logo.png" alt="MoonSIC"></li>
         <ul>
-            <li class="brand"><img src="Assets/logo.png" alt="MoonSIC"></li>
-            <li>Home</li>
-            <li>Search</li>
-            <li>About</li>
+            <li>Discover<span></span></li>
+            <li>My Library</li>
+            <li>Radio</li>
         </ul>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search Moonsic . . . ">
+        </div>
     </nav>
 
 
     <!-- Backgrounds -->
     <div id="Default" class="songImg"></div> <!-- to add Default background image-->
-    
+
     <div class="dynamicColor"></div> <!-- to add dynamic changing color-->
-    
+
     <!-- Main Content -->
     <div class="hero">
 
         <div class="container">
             <h1>the Voice![playlist]</h1>
             <div class="playlist">
-                <h4 class = "active"><span></span> <i class="fa-solid fa-music"></i> playlist_1</h4>
+                <h4 class="active"><span></span> <i class="fa-solid fa-music"></i> playlist_1</h4>
                 <h4><span></span> <i class="fa-solid fa-music"></i> last_listenng</h4>
                 <h4><span></span> <i class="fa-solid fa-music"></i> recommend</h4>
             </div>
 
-        
+
             <div class="songList">
                 <div class="songItem">
                     <img alt="1">
@@ -106,42 +110,151 @@
         </div>
 
         <div class="player">
-
+            <div class="content">
+                <h1>Ed Sheeran- Perfect</h1>
+                <p>I found a love... for me.... darling just dive right in and follow my lead</p>
+                <div class="buttons">
+                    <button>PLAY</button>
+                    <button>FOLLOW</button>
+                </div>
+            </div>
+            <div class="popular_songs">
+                <div class="h4">
+                    <h4>Popular songs</h4>
+                    <div class="btn_s">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="pop_songs">
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img src="Assets/Cover/1.jpg" alt="1">
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5>Perfect<br>
+                            <div class="subtitle">Ed_Sheeran</div>
+                        </h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img src="Assets/Cover/1.jpg" alt="1">
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5>Perfect<br>
+                            <div class="subtitle">Ed_Sheeran</div>
+                        </h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img src="Assets/Cover/1.jpg" alt="1">
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5>Perfect<br>
+                            <div class="subtitle">Ed_Sheeran</div>
+                        </h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img src="Assets/Cover/1.jpg" alt="1">
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5>Perfect<br>
+                            <div class="subtitle">Ed_Sheeran</div>
+                        </h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img src="Assets/Cover/1.jpg" alt="1">
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5>Perfect<br>
+                            <div class="subtitle">Ed_Sheeran</div>
+                        </h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img src="Assets/Cover/1.jpg" alt="1">
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5>Perfect<br>
+                            <div class="subtitle">Ed_Sheeran</div>
+                        </h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img src="Assets/Cover/1.jpg" alt="1">
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5>Perfect<br>
+                            <div class="subtitle">Ed_Sheeran</div>
+                        </h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img src="Assets/Cover/1.jpg" alt="1">
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5>Perfect<br>
+                            <div class="subtitle">Ed_Sheeran</div>
+                        </h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img src="Assets/Cover/1.jpg" alt="1">
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5>Perfect<br>
+                            <div class="subtitle">Ed_Sheeran</div>
+                        </h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img src="Assets/Cover/1.jpg" alt="1">
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5>Perfect<br>
+                            <div class="subtitle">Ed_Sheeran</div>
+                        </h5>
+                    </li>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <!-- Bottom Player -->
-        <div class="bottom">
-            <!-- <div class="progressBarBox">
+    <!-- Bottom Player -->
+    <div class="bottom">
+        <!-- <div class="progressBarBox">
                 <input type="range" name="range" id="myProgressBar" min="0" max="100" value="0">
             </div> -->
-            <div class="songInfo">
-                <img src="Assets/Z23b.gif" alt="playing" height="30px" id="gif">
-                <img src="Assets/def6.png" alt="" id="mposter_master_play" height = "40px" width = "40px">
-                <h5 id="masterSongName">masterSongName
-                    <div class="subtitle">Artist_name</div>
-                </h5>
-            </div>
-            <div class="icons">
-                <i class="fa-solid fa-music shuffle"></i>
-                <i class="fas  fa-step-backward" id="prev"></i>
-                <i class="fas fa-2x fa-play-circle" id="play"></i>
-                <i class="fas  fa-step-forward" id="next"></i>
-                <i class="fa-solid fa-cloud-arrow-down" id="downloadMusic"></i>
-            </div>
-            <span id="currentStart">0:00</span>
-            <div class="bar">
-                <input type = "range" id=" seek" min ="0" max="100" value="0">
-                <div class="bar2" id = "bar2"></div>
-                <div class="dot"></div>
-            </div>
-            <span id="currentEnd">11:11</span>
-            <div class="vol">
-                <i class="fa-solid fa-volume-low" id="vol_icon"></i>
-                <input type="range" name="range" id="vol" min="0" max="100" value="100">
-                <div class="dot" id = "vol_fot"></div>
-                <div class="vol_bar"></div>
-            </div>
+        <div class="songInfo">
+            <img src="Assets/Z23b.gif" alt="playing" height="30px" id="gif">
+            <img src="Assets/def6.png" alt="" id="mposter_master_play" height="40px" width="40px">
+            <h5 id="masterSongName">masterSongName
+                <div class="subtitle">Artist_name</div>
+            </h5>
         </div>
+        <div class="icons">
+            <i class="fa-solid fa-music shuffle"></i>
+            <i class="fas  fa-step-backward" id="prev"></i>
+            <i class="fas fa-2x fa-play-circle" id="play"></i>
+            <i class="fas  fa-step-forward" id="next"></i>
+            <i class="fa-solid fa-cloud-arrow-down" id="downloadMusic"></i>
+        </div>
+        <span id="currentStart">0:00</span>
+        <div class="bar">
+            <input type="range" id=" seek" min="0" max="100" value="0">
+            <div class="bar2" id="bar2"></div>
+            <div class="dot"></div>
+        </div>
+        <span id="currentEnd">11:11</span>
+        <div class="vol">
+            <i class="fa-solid fa-volume-low" id="vol_icon"></i>
+            <input type="range" name="range" id="vol" min="0" max="100" value="100">
+            <div class="dot" id="vol_fot"></div>
+            <div class="vol_bar"></div>
+        </div>
+    </div>
 
     </div>
 

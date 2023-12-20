@@ -122,8 +122,8 @@
                 <div class="h4">
                     <h4>Popular songs</h4>
                     <div class="btn_s">
-                        <i class="fa-solid fa-chevron-left"></i>
-                        <i class="fa-solid fa-chevron-right"></i>
+                        <i class="fa-solid fa-chevron-left" id="pop_song_left"></i>
+                        <i class="fa-solid fa-chevron-right" id="pop_song_right"></i>
                     </div>
                 </div>
                 <div class="pop_songs">
@@ -139,7 +139,7 @@
                     <li class="pop_item">
                         <div class="img_play">
                             <img src="Assets/Cover/1.jpg" alt="1">
-                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                            <i class="fas songItemPlay fa-play-circle" id="1"></i>
                         </div>
                         <h5>Perfect<br>
                             <div class="subtitle">Ed_Sheeran</div>
@@ -148,7 +148,7 @@
                     <li class="pop_item">
                         <div class="img_play">
                             <img src="Assets/Cover/1.jpg" alt="1">
-                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                            <i class="fas songItemPlay fa-play-circle" id="2"></i>
                         </div>
                         <h5>Perfect<br>
                             <div class="subtitle">Ed_Sheeran</div>
@@ -157,7 +157,7 @@
                     <li class="pop_item">
                         <div class="img_play">
                             <img src="Assets/Cover/1.jpg" alt="1">
-                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                            <i class="fas songItemPlay fa-play-circle" id="3"></i>
                         </div>
                         <h5>Perfect<br>
                             <div class="subtitle">Ed_Sheeran</div>
@@ -166,7 +166,7 @@
                     <li class="pop_item">
                         <div class="img_play">
                             <img src="Assets/Cover/1.jpg" alt="1">
-                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                            <i class="fas songItemPlay fa-play-circle" id="4"></i>
                         </div>
                         <h5>Perfect<br>
                             <div class="subtitle">Ed_Sheeran</div>
@@ -175,7 +175,7 @@
                     <li class="pop_item">
                         <div class="img_play">
                             <img src="Assets/Cover/1.jpg" alt="1">
-                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                            <i class="fas songItemPlay fa-play-circle" id="5"></i>
                         </div>
                         <h5>Perfect<br>
                             <div class="subtitle">Ed_Sheeran</div>
@@ -184,7 +184,7 @@
                     <li class="pop_item">
                         <div class="img_play">
                             <img src="Assets/Cover/1.jpg" alt="1">
-                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                            <i class="fas songItemPlay fa-play-circle" id="6"></i>
                         </div>
                         <h5>Perfect<br>
                             <div class="subtitle">Ed_Sheeran</div>
@@ -193,7 +193,7 @@
                     <li class="pop_item">
                         <div class="img_play">
                             <img src="Assets/Cover/1.jpg" alt="1">
-                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                            <i class="fas songItemPlay fa-play-circle" id="7"></i>
                         </div>
                         <h5>Perfect<br>
                             <div class="subtitle">Ed_Sheeran</div>
@@ -202,7 +202,7 @@
                     <li class="pop_item">
                         <div class="img_play">
                             <img src="Assets/Cover/1.jpg" alt="1">
-                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                            <i class="fas songItemPlay fa-play-circle" id="8"></i>
                         </div>
                         <h5>Perfect<br>
                             <div class="subtitle">Ed_Sheeran</div>
@@ -211,7 +211,7 @@
                     <li class="pop_item">
                         <div class="img_play">
                             <img src="Assets/Cover/1.jpg" alt="1">
-                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                            <i class="fas songItemPlay fa-play-circle" id="9"></i>
                         </div>
                         <h5>Perfect<br>
                             <div class="subtitle">Ed_Sheeran</div>
@@ -219,12 +219,14 @@
                     </li>
                 </div>
             </div>
+
+
             <div class="popular_artists">
                 <div class="h4">
                     <h4>Popular songs</h4>
                     <div class="btn_s">
-                        <i class="fa-solid fa-chevron-left"></i>
-                        <i class="fa-solid fa-chevron-right"></i>
+                        <i class="fa-solid fa-chevron-left" id="pop_art_left"></i>
+                        <i class="fa-solid fa-chevron-right" id="pop_art_right"></i>
                     </div>
                 </div>
                 <div class="items">
@@ -285,29 +287,29 @@
             </div> -->
         <div class="songInfo">
             <img src="Assets/Z23b.gif" alt="playing" height="30px" id="gif">
-            <img src="Assets/def6.png" alt="" id="mposter_master_play" height="40px" width="40px">
+            <img src="Assets/def6.png" alt="" id="poster_master_play" height="40px" width="40px">
             <h5 id="masterSongName">masterSongName
                 <div class="subtitle">Artist_name</div>
             </h5>
         </div>
         <div class="icons">
             <i class="fa-solid fa-music shuffle"></i>
-            <i class="fas  fa-step-backward" id="prev"></i>
-            <i class="fas fa-2x fa-play-circle" id="play"></i>
+            <i class="fas  fa-step-backward" id="back"></i>
+            <i class="fas fa-2x fa-play-circle" id="masterPlay"></i>
             <i class="fas  fa-step-forward" id="next"></i>
             <i class="fa-solid fa-cloud-arrow-down" id="downloadMusic"></i>
         </div>
-        <span id="currentStart">0:00</span>
+        <span id="currentStart"></span>
         <div class="bar">
-            <input type="range" id=" seek" min="0" max="100" value="0">
+            <input type="range" id="seek" min="0" max="100" value="0">
             <div class="bar2" id="bar2"></div>
             <div class="dot"></div>
         </div>
-        <span id="currentEnd">11:11</span>
+        <span id="currentEnd"></span>
         <div class="vol">
-            <i class="fa-solid fa-volume-low" id="vol_icon"></i>
+            <i class="fa-solid fa-volume-high" id="vol_icon"></i>
             <input type="range" name="range" id="vol" min="0" max="100" value="100">
-            <div class="dot" id="vol_fot"></div>
+            <div class="dot" id="vol_dot"></div>
             <div class="vol_bar"></div>
         </div>
     </div>
@@ -316,7 +318,7 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/54b6994b08.js" crossorigin="anonymous"></script>
 </body>
 

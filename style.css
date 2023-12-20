@@ -433,7 +433,7 @@ nav ul li span{
 .player .popular_songs .pop_songs{
     width: 100%;
     height: 150px;
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     overflow: scroll;
     scroll-behavior: smooth;
@@ -500,7 +500,7 @@ nav ul li span{
 .player .popular_songs .pop_songs li h5 .subtitle{
     font-size: 11px;
     color: gray;
-    margin: 5px;
+    /* margin: 5px; */
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -675,6 +675,7 @@ nav ul li span{
     background: rgba(105, 105, 170, 1);
     height: 2px;
     margin-left: 80px;
+    margin-right: 10px;
 }
 
 .bottom .vol i{

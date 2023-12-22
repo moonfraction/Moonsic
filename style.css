@@ -6,7 +6,6 @@ body {
     font-family: 'Signika', sans-serif;
 }
 
-
 /*Root Margin & Padding*/
 * {
     margin: 0;
@@ -17,44 +16,46 @@ body {
 /*Navabar Styling*/
 nav {
     font-family: 'Signika', sans-serif;
-    background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    z-index: 1;
+    background-color:rgba(10, 0, 77, 0.8);
 }
+
 
 .brand{
     width: 25%;
+    height: 100%;
+    /* border: 1px solid white; */
 }
 
 .brand img{
     position: relative;
-    height: 50px;
     left : 20px;
-    /* margin-right: 50px; */
-    /* top: 10px; */
+    top: 5px;
+    height: 50px;
 }
+
 
 nav ul{
     display: flex;
     color: white;
+    /* border: 1px solid white; */
 }
-
 nav ul li{
+    position: relative;
     list-style: none;
     font-size: 1rem;
     cursor: pointer;
     margin-right: 25px;
     color: gray;
     transition: all 0.3s linear;
-    position: relative;
 }
 nav ul li:hover{
     color: white;
 }
-
 nav ul li:nth-child(1){
     color: white;
 }
@@ -65,63 +66,124 @@ nav ul li span{
     left:0;
     top:20px;
     background: rgba(39, 146, 218, 1);
-    border-radius: 10px;
+    border-radius: 5px;
 }
-
 
 
 .search{
     position: absolute;
-    right: 20px;
-    width: 40%;
+    right: 30px;
+    display: flex;
+    z-index: 3;
+    align-items: center;
+    /* border: 1px solid white; */
 }
 .search i{
     color: white;
     margin-right: 10px;
 }
 .search input{
-    width: 90%;
+    width: 300px;
     height: 30px;
-    border-radius: 15px;
+    border-radius: 20px;
     border: none;
     outline: none;
-    padding-left: 10px;
+    padding-left: 8px;
     font-family: 'Signika', sans-serif;
     font-size: 1rem;
     color: white;
-    background-color: rgba(255, 255, 255, 0.3);
-    transition: all 0.3s linear;
-
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.2s linear;
 }
+.search input:focus{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.search .search_results{
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    width: 92%;
+    height: 200px;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+    overflow: scroll;
+    display: none;
+    /* border: 1px solid white; */
+}
+.search .search_results::-webkit-scrollbar{
+    display: none;
+}
+.search .search_results .card{
+    width: 99%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    margin: 2px;
+    background:rgba(10, 0, 77, 0.8);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    display: none;
+    /* border: 1px solid white; */
+}
+.search .search_results .card:hover{
+    background: rgba(39, 146, 218, 1);
+}
+.search .search_results .card img{
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+}
+.search .search_results .card .content{
+    width: 80%;
+    height: 100%;
+    margin-left: 10px;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* border: 1px solid white; */
+}
+.search .search_results .card .content .subtitle{
+    font-size: 13px;
+    color: rgb(162, 157, 157);
+    transition: all 0.2s linear;
+}
+.search .search_results .card:hover .content .subtitle{
+    color:black;
+}
+
+/*navbar styling ends*/
 
 
 
 /*background styling*/
 #Default {
     background-image: url(Assets/def6.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    opacity: 0.6;
     position: absolute;
     top: 0;
-    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
     transition: opacity 1s ease-in;
 }
 
 .dynamicColor {
     position: absolute;
     top: 0;
+    z-index: -3;
+    opacity: 1;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab, #c224e6);
+    background: linear-gradient(45deg, #d84b99, #d2001a, #450c41, #c224e6, #7462ff, #23d5ab, #f2db7d);
     background-size: 300% 300%;
-    animation: color 12s ease-in-out infinite;
-    opacity: 1;
-    z-index: -2;
+    animation: color 5s linear infinite;
 }
-
 @keyframes color {
     0% {
         background-position: 0% 50%;
@@ -140,79 +202,73 @@ nav ul li span{
 
 
 
-/*main styling*/
 
-/* hero contains container , player, bottom */
+/* hero contains mid section only, i.e. excluding nav and bottom*/
 .hero{
-    position: relative;
     display: flex;
-    height: 90vh;
+    height: 78vh;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    background: linear-gradient(rgba(10, 0, 77, 0.8), rgba(22, 0, 120, 0.8), rgba(117, 86, 216, 0.8), rgba(60, 15, 86, 0.8));
+    /* border: 10px solid white; */
 }
 
-/*container styling*/
+/*container styling i.e left side*/
 .container {
     color: #fff;
     display: flex;
     flex-direction: column;
     width: 25%;
-    /* border-radius: 10px; */
-    justify-content: space-evenly;
-    height: 78vh;
-    
-    
-    background-color: rgba(6, 2, 89, 0.5);
+    height: 100%;    
+    /* border: 1px solid white; */
 }
 
+/*player styling i.e right side*/
 .player{
     width: 75%;
-    /* border-radius: 10px; */
-    height: 78vh;
+    height: 100%;
     color: #fff;
+    /* border: 1px solid white; */
     
-    background-color: rgba(123, 129, 2, 0.5);
 }
 
 .container h1 {
     color: black;
-    text-shadow: 2px 2px 12px rgb(137, 179, 241);
+    text-shadow: 2px 2px 20px rgb(137, 179, 241);
     font-family: 'Signika', sans-serif;
     font-size: 20px;
     margin: 15px 0 0 20px;
-    margin: 15px 0 0 20px;
+    font-weight: 600;
+    font-size: x-large;
 }
 
-/*container styling ends*/
-
-
+/*playlist headings*/
 .playlist{
     margin: 20px 0 0 20px;   
+    /* border: 1px solid white; */
 }
-
 .fa-music{
-    margin-right: 10px;
+    margin-right: 5px;
 }
-
 .playlist h4{
     font-size: 15px;
     font-weight: 200;
     font-family: 'Signika', sans-serif;
     color: gray;
-    padding-bottom: 5px;
+    padding :3px;
     cursor: pointer;
     display: flex;
     align-items: center;
     transition: all 0.3s linear;
+
+    /* border: 1px solid white; */
 }
 .playlist h4:hover{
     color: white;
 }
-
 .playlist h4 span{
     position: relative;
-    margin-right: 35px;
+    margin-right: 25px;
+    margin-left: 5px;
 }
 .playlist h4 span::before{
     content: '';
@@ -228,15 +284,14 @@ nav ul li span{
     border: 2px solid white;
 }
 
+/*styling for active class*/
 .playlist h4 i{
     display: none;
     padding-right: 8px;
 }
-
 .playlist .active{
     color: rgba(39, 146, 218, 1);
-    text-shadow: 2px 2px 12px rgb(137, 179, 241);
-
+    text-shadow: 2px 2px 15px rgb(137, 179, 241);
 }
 .playlist .active span{
     display: none;
@@ -250,87 +305,97 @@ nav ul li span{
 .songList {
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
     overflow-y: scroll;
-    height: 70%;
-    margin-top: 30px;
+    height: 100%;
+    margin-top: 20px;
     padding: 5px;
-    /* background-color: rgba(255, 255, 255, 0.1); */
-    /* border: none; */
+    
+    /* background: rgba(137, 179, 241, 0.1); */
+    /* border: 1px solid white; */
     /* box-shadow:inset 0 0 50px 100px rgba(255, 255, 255, 0.1); */
 }
+
+/*song tiles styling*/
+.songItem {
+    font-size: 13px;
+    display: flex;
+    margin: 8px 10px;
+    padding: 3px 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+.songItem:hover {
+    background-color: rgba(39, 146, 218, 1);
+    box-shadow: 0 0 10px 2px #FFECD6;
+    transform: scale(1.05);
+}
+.songItem:hover h5 .subtitle{
+    color:  black;
+}
+
+.songItem img {
+    height: 30px;
+    width: 30px;
+    border-radius: 7px;
+    padding: 3px 0;
+    margin-left: 4px;
+    transition: all 0.2s ease-in;
+    /* margin-right: 20px; */
+}
+.songItem img:hover {
+    transform: scale(1.8);
+    border-radius: 50%;
+}
+.songItem .timeStamp {
+    margin: 0 10px;
+}
+/*song tiles styling ends*/
 
 /*Scrollbar*/
 /* width */
 ::-webkit-scrollbar {
     width: 7px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 7px;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 7px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
 }
-
 /*Scrollbar ends*/
 
-/*song tiles styling*/
-.songItem {
-    font-size: 13px;
-    display: flex;
-    margin: 6px 10px;
-    padding: 3px 10px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 4px white;
-    border-radius: 15px;
-    transition: all 0.2s ease-in;
-    cursor: pointer;
-}
 
-.songItem:hover {
-    background-color: rgba(39, 146, 218, 0.8);
-    box-shadow: 0 0 5px 5px #FFECD6;
-    transform: scale(1.05);
-    color:  #FFECD6;
-}
 
-.songItem img {
-    height: 30px;
-    width: 30px;
-    border-radius: 10px;
-    padding: 3px 0;
-    transition: all 0.2s ease-in;
-    /* margin-right: 20px; */
-}
-
-.songItem img:hover {
-    transform: scale(1.8);
-    border-radius: 50%;
-}
-
-.timeStamp {
-    margin: 0 10px;
-}
-/* 
+/*control buttons*/
 .fa-play-circle {
     cursor: pointer;
+    color: white;
     transition: all 0.15s ease-in;
 }
 .fa-play-circle:hover {
-    color: #FFECD6;
-    transform: scale(1.3);
+    color:#e3e3ff;
+    transform: scale(1.2);
+}
+.fa-pause-circle {
+    cursor: pointer;
+    color: white;
+    transition: all 0.15s ease-in;
+}
+.fa-pause-circle:hover {
+    color:#e3e3ff;
+    transform: scale(1.2);
 }
 
 .fa-step-backward{
@@ -339,7 +404,7 @@ nav ul li span{
     transition: all 0.15s ease-in;
 }
 .fa-step-backward:hover{
-    color: white;
+    color:#e3e3ff;
     transform: scale(1.2);
 }
 
@@ -349,41 +414,44 @@ nav ul li span{
     transition: all 0.15s ease-in;
 }
 .fa-step-forward:hover{
-    color: white;
+    color:#e3e3ff;
     transform: scale(1.2);
-} */
-
-/*song tiles styling ends*/
-
-/*main styling ends*/
+}
 
 
+/*player styling: right side*/
+
+/*content styling*/
 .player .content{
+    display: flex;
     width : 90%;
-    height: 25%;
-    border:1px solid white;
+    height: 15%;
     margin: auto;
     padding-top: 20px;
+    justify-content: space-between;
+    /* border:1px solid white; */
 }
 
 .player .content h1{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
     
 }
 .player .content p{
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 400;
     color: gray;
     margin: 5px;
 }
 
 .player .content .buttons{
-    margin-top: 20px;
+    margin-top: 10px;
+    /* border: 1px solid white;     */
 }
 .player .content .buttons button{
     width:130px;
     height: 30px;
+    margin: 10px;
     border:2px solid #36e3ec;
     border-radius: 20px;
     background: #5adae0;
@@ -403,28 +471,26 @@ nav ul li span{
     background: #36e3ec;
     color: white;
 }
+/*content styling ends*/
 
-
-
+/*popular songs styling*/
 .player .popular_songs{
     width: 90%;
-    /* height: 50%; */
     margin: auto;
     margin-top: 15px;
-    border: 1px solid white;    
+    /* border: 1px solid white; */
 }
-
 .player .h4{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 .player .h4 i{
     color:  #a4a8b4;
     cursor: pointer;
     transition: all 0.2s linear;
-    padding: 5px;
+    padding: 0 15px;
 }
 .player .h4 i:hover{
     color: white;
@@ -434,25 +500,19 @@ nav ul li span{
 .player .popular_songs .pop_songs{
     width: 100%;
     height: 130px;
-    /* margin-top: 10px; */
     display: flex;
     overflow: scroll;
     scroll-behavior: smooth;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
-.player ::-webkit-scrollbar{
-    display: none;
-}
-
 .player li{
     min-width: 100px;
     height: 100%;
     list-style-type: none;
     margin-right: 10px;
-    transition: 0.3s  linear;
-    /* border-radius: 10px; */
     display: flex;
     flex-direction: column;
+    transition: 0.3s  linear;
     
     /* border: 1px solid white; */
 }
@@ -463,11 +523,11 @@ nav ul li span{
     width: 80px;
     height: 80px;
     margin: auto;
-    /* border: 1px solid white; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid white; */
 }
 .player .popular_songs .pop_songs li .img_play img{
     width: 100%;
@@ -480,7 +540,8 @@ nav ul li span{
     cursor: pointer;
     opacity: 0;
     padding-top: 5px;
-    transition: 0.3s linear;
+    transition: 0.2s linear;
+    /* border: 1px solid white; */
 }
 .player .popular_songs .pop_songs li:hover .img_play i{
     opacity: 1;    
@@ -488,12 +549,16 @@ nav ul li span{
 .player .popular_songs .pop_songs li:hover .img_play img{
     border-radius: 20px 0;
 }
-.player .popular_songs .pop_songs li:hover h5{
-    opacity: 0;
+.player .popular_songs .pop_songs li:hover h5 {
     z-index: -10;
 }
+.player ::-webkit-scrollbar{
+    display: none;
+}
 
-.player .popular_songs .pop_songs li h5{
+
+/*song name and artist name styling*/
+h5{
     font-size: 12px;
     font-weight: 200;
     width: 100px;
@@ -505,7 +570,7 @@ nav ul li span{
     white-space: nowrap;
     transition: 0.3s linear;
 }
-.player .popular_songs .pop_songs li h5 .subtitle{
+h5 .subtitle{
     font-size: 10px;
     color: gray;
     /* margin: 5px; */
@@ -513,38 +578,33 @@ nav ul li span{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    transition: all 0.2s linear;
 }
 
 
+/*popular artists styling ends*/
 .player .popular_artists{
     width: 90%;
     height: auto;
     margin: auto;
-    margin-top: 15px;
-    border: 1px solid white;
+    margin-top: 35px;
+    /* border: 1px solid white; */
 }
-
 
 .player .popular_artists .items{
     width: 100%;
     height: 130px;
-    /* margin-top: 10px; */
     display: flex;
     overflow: scroll;
     scroll-behavior: smooth;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
-.player .popular_artists .items::-webkit-scrollbar{
-    height: 5px;
-}
-
 .player .popular_artists .items li{
     min-width: 100px;
     height: 100%;
     list-style-type: none;
     margin-right: 10px;
     transition: 0.3s  linear;
-    /* border-radius: 10px; */
     display: flex;
     flex-direction: column;
     
@@ -554,7 +614,6 @@ nav ul li span{
     background: rgba(105, 105, 170, 1);
     cursor: pointer;
 }
-
 .player .popular_artists .items li img{
     width: 90px;
     height: 90px;
@@ -562,25 +621,14 @@ nav ul li span{
     border-radius: 50%; 
     transition: 0.3s linear;
 }
-
 .player .popular_artists .items li:hover img{
     /* border-radius: 20px 0; */
     width: 100px;
     height: 100px;
 }
 
-.player .popular_artists .items li h5{
-    font-size: 12px;
-    font-weight: 600;
-    /* width: 100px; */
-    color: white;
-    /* margin: 5px; */
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    transition: 0.3s linear;
-}
+/*popular songs and artists styling ends*/
+
 
 
 /*footer styling*/
@@ -589,31 +637,29 @@ nav ul li span{
     width: 100%;
     display: flex;
     align-items: center;
+    background-color:rgba(60, 15, 86, 0.8);
+    box-shadow: #d7cfcf 0 0 500px 5px;
 
-    position: absolute;
-    bottom: 0;
-    
-    box-shadow: #d7cfcf 0 0 100px 5px;
-    background-color: rgba(148, 28, 4, 0.5);
+    /* border: 1px solid white; */
     /* opacity: 0.3; */
     /* transition: opacity 0.2s ease-in-out; */
 }
 
-
+/* current playing song*/
 .songInfo {
     width: 500px;
     height: 45px;
-    margin :0 20px 0 5px;
+    margin :0 15px 0 10px;
     padding-bottom: 5px;
-    border: 2px solid white;
     display: flex;
     align-items:flex-end;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    
+    /* border: 2px solid white; */
 }
-
-.songInfo #gif {
+.songInfo img {
     margin: 0 5px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -628,11 +674,10 @@ nav ul li span{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    width: 100%;
+    text-align: left;
 
-    /* padding-bottom: 5px;
-    cursor: pointer;
-    display: flex;
-    transition: all 0.3s linear; */
+    /* border: 1px solid white; */
 }
 .songInfo h5 .subtitle{
     font-size: small;
@@ -642,12 +687,13 @@ nav ul li span{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-align: left;
+
+    /* border: 1px solid white; */
 }
 
-.bottom i{
-    color: white;
-}
 
+/*control buttons*/
 .bottom .icons{
     width: 15%;
     font-size: 20px;
@@ -657,41 +703,56 @@ nav ul li span{
     align-items: center;
     justify-content: space-evenly;
     cursor: pointer;
-
 }
 .bottom .icons i{
     padding: 0 5px;
 }
 .bottom .icons .shuffle{
     margin-right: 10px;
-    font-size: 23px;
+    font-size: 25px;
+    color: white;
+    transition: all 0.2s ease-in;
+    width: 19.5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.bottom .shuffle:hover{
+    color: #b3e3f4;
+    transform: scale(1.2);
 }
 .bottom .icons #downloadMusic{
+    text-decoration: none;
+    color: white;
     margin-left: 10px;
     font-size: 28px;
+    transition: all 0.2s ease-in;
+}
+.bottom .icons #downloadMusic:hover{
+    color: #b3e3f4;
+    transform: scale(1.2);
 }
 .bottom span{
     color: white;
     width:45px;
-    /* border: 1px solid white; */
     font-weight: 400;
+    /* border: 1px solid white; */
 }
 
+/*progress bar*/
 .bottom #currentStart{
     margin-left: 20px;
 }
-
 .bottom .bar{
     position: relative;
     width: 50%;
     height: 2px;
     background: rgba(105, 105, 170, 1);
-    margin: 0 10px 0 15px;
+    margin: 0 10px;
 }
 .bottom .bar .bar2{
     position: absolute;
     background: rgba(39, 146, 218, 1);
-    width : 0%;
     height: 100%;
     top : 0;
     transition: 1s linear;
@@ -706,7 +767,6 @@ nav ul li span{
     top:-1px;
     transition: 1s linear;
 }
-
 .bottom .bar .dot::before{
     content: '';
     position: absolute;
@@ -727,8 +787,10 @@ nav ul li span{
     cursor: pointer;
     z-index: 10;
     opacity: 0;
+
 }
 
+/*volume bar*/
 .bottom .vol{
     position: relative;
     right: 10px;
@@ -738,12 +800,13 @@ nav ul li span{
     margin-left: 80px;
     margin-right: 10px;
 }
-
 .bottom .vol i{
     position: absolute;
     font-size: 20px;
     left : -33px;   
     top: -8px;
+    color: white;
+    transition: all 0.2s ease-in;
 }
 .bottom .vol input{
     position: absolute;
@@ -753,7 +816,6 @@ nav ul li span{
     cursor: pointer;
     z-index: 10;
 }
-
 .bottom .vol .vol_bar{
     position: absolute;
     background: rgba(39, 146, 218, 1);
@@ -762,7 +824,6 @@ nav ul li span{
     top:0;
     transition: 1s linear;
 }
-
 .bottom .vol .dot{
     position: absolute;
     width: 5px;
@@ -774,7 +835,6 @@ nav ul li span{
     top:-1px;
     transition: 1s linear;
 }
-
 .bottom .vol .dot::before{
     content: '';
     position: absolute;
@@ -788,6 +848,11 @@ nav ul li span{
     box-shadow:inset 0 0 3px 1px rgb(17, 94, 145);
 }
 
+/*volume bar ends*/
+/*footer styling ends*/
+
+
+/* 
 .progressBarBox {
     position: relative;
     display: flex;
@@ -798,10 +863,10 @@ nav ul li span{
     background: linear-gradient(to right, #FFECD6, #4CB9E7, #3559E0, #0F2167);
     border-radius: 10px;
     margin: 0 10px;
-    /* box-shadow: 0 0 15px 1px rgba(235, 237, 209, 0.5); */
-    /* padding: 5px 10px; */
-}
-
+    box-shadow: 0 0 15px 1px rgba(235, 237, 209, 0.5);
+    padding: 5px 10px;
+} */
+/* 
 .progressBarBox:hover {
     box-shadow: 0 0 15px 1px rgba(235, 237, 209, 0.5);
 }
@@ -833,12 +898,12 @@ nav ul li span{
     transition: all 0.2s ease-in;
     border: 1.5px solid blue;
     box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.2);
-}
+} */
 
-#myProgressBar::-webkit-slider-thumb:hover {
+/* #myProgressBar::-webkit-slider-thumb:hover {
     transform: scale(1.2);
     border: 1.5px solid white;
-}
+} */
 
 /* .icons {
     display: flex;

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonsic-Charlie Puth</title>
+    <link rel="icon" type="image/x-icon" href="../../Assets/moon.png">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <li class="brand"><img src="../../Assets/logo.png" alt="Moonsic"></li>
+        <ul>
+            <a href="../../index.html"><li>Home</li></a>
+            <a href="../../index.html"><li>My Library<span></span></li></a>
+            <a href="../../index.html"><li>Favorites</li></a>
+        </ul>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search Moonsic . . . ">
+            <div class="search_results">
+                <!-- Search cards get appended here on searching -->
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Backgrounds -->
+    <div id="Default" class="songImg"></div> <!-- to add Default background image-->
+
+
+
+
+    <div class="hero">
+        <!-- left side -->
+        <div class="container">
+            <h1><i class="fa-solid fa-microphone-lines"></i> Charlie Puth</h1>
+
+
+            <div class="songList">
+                <!-- list1 has ids 10- 19 -->
+                <div class="list1">
+                    <div class="songItem">
+                        <img alt="1">
+                        <h5></h5>
+                        <span class="songListPlay">
+                            <span class="timeStamp">Time_stamp</span>
+                            <i class="fas songItemPlay fa-play-circle" id="10"></i>
+                        </span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="2">
+                        <h5></h5>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="11"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="3">
+                        <h5></h5>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="12"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="4">
+                        <h5></h5>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="13"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="5">
+                        <h5></h5>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="14"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="6">
+                        <h5></h5>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="15"></i></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="7">
+                        <h5></h5>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="16"></i></span>
+                    </div>
+                    <!-- <div class="songItem">
+                        <img alt="8">
+                        <h5></h5>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="17"></i></span>
+                    </div> -->
+                    <!-- <div class="songItem">
+                        <img alt="9">
+                        <h5></h5>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="18"></i></span>
+                    </div> -->
+                    <!-- <div class="songItem">
+                        <img alt="10">
+                        <h5></h5>
+                        <span class="songListPlay"><span class="timeStamp">Time_stamp</span> <i
+                                class="fas songItemPlay fa-play-circle" id="19"></i></span>
+                    </div> -->
+                </div>
+                <div class="lastList"></div>
+                <div class="recommend"></div>
+            </div>
+        </div>
+
+        <!-- right side -->
+        <div class="player">
+            <div class="content">
+                <div class="content_info">
+                    <h1>Charlie Puth- See You Agian</h1>
+                    <p>It's been a long day without you, my friend<br>And I'll tell you all about it when I see you again</p>
+                </div>
+                <div class="buttons">
+                    <button>PLAY</button>
+                    <a href="https://www.instagram.com/charlieputh?utm_source=ig_web_button_share_sheet&igsh=MmVlMjlkMTBhMg==" target="_blank"><button>FOLLOW</button></a>
+                </div>
+            </div>
+
+            <!-- SONGS -->
+            <div class="popular_songs">
+                <div class="h4">
+                    <h4>Popular songs</h4>
+                    <div class="btn_s">
+                        <i class="fa-solid fa-chevron-left" id="pop_song_left"></i>
+                        <i class="fa-solid fa-chevron-right" id="pop_song_right"></i>
+                    </div>
+                </div>
+
+                <!-- pop_items has ids 0 to 9 -->
+                <div class="pop_songs">
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img alt="1"> <!-- img of song -->
+                            <i class="fas songItemPlay fa-play-circle" id="0"></i>
+                        </div>
+                        <h5></h5> <!-- name of song -->
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img alt="2">
+                            <i class="fas songItemPlay fa-play-circle" id="1"></i>
+                        </div>
+                        <h5></h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img alt="3">
+                            <i class="fas songItemPlay fa-play-circle" id="2"></i>
+                        </div>
+                        <h5></h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img alt="4">
+                            <i class="fas songItemPlay fa-play-circle" id="3"></i>
+                        </div>
+                        <h5></h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img alt="5">
+                            <i class="fas songItemPlay fa-play-circle" id="4"></i>
+                        </div>
+                        <h5></h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img alt="6">
+                            <i class="fas songItemPlay fa-play-circle" id="5"></i>
+                        </div>
+                        <h5></h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img alt="7">
+                            <i class="fas songItemPlay fa-play-circle" id="6"></i>
+                        </div>
+                        <h5></h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img alt="8">
+                            <i class="fas songItemPlay fa-play-circle" id="7"></i>
+                        </div>
+                        <h5></h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img alt="9">
+                            <i class="fas songItemPlay fa-play-circle" id="8"></i>
+                        </div>
+                        <h5></h5>
+                    </li>
+                    <li class="pop_item">
+                        <div class="img_play">
+                            <img alt="10">
+                            <i class="fas songItemPlay fa-play-circle" id="9"></i>
+                        </div>
+                        <h5></h5>
+                    </li>
+                </div>
+            </div>
+
+
+            <!-- ARTISTS -->
+            <div class="popular_artists">
+                <div class="h4">
+                    <h4>Popular artists</h4>
+                    <div class="btn_s">
+                        <i class="fa-solid fa-chevron-left" id="pop_art_left"></i>
+                        <i class="fa-solid fa-chevron-right" id="pop_art_right"></i>
+                    </div>
+                </div>
+                <div class="items">
+                    <li class="art_item">
+                        <a href=""><img src="" alt="1"></a>                        
+                        <h5></h5>
+                    </li>
+                    <li class="art_item">
+                        <a href=""><img src="" alt="1"></a>                        
+                        <h5></h5>
+                    </li>
+                    <li class="art_item">
+                        <a href=""><img src="" alt="1"></a>                        
+                        <h5></h5>
+                    </li>
+                    <li class="art_item">
+                        <a href=""><img src="" alt="1"></a>                        
+                        <h5></h5>
+                    </li>
+                    <li class="art_item">
+                        <a href=""><img src="" alt="1"></a>                        
+                        <h5></h5>
+                    </li>
+                    <li class="art_item">
+                        <a href=""><img src="" alt="1"></a>                        
+                        <h5></h5>
+                    </li>
+                    <li class="art_item">
+                        <a href=""><img src="" alt="1"></a>                        
+                        <h5></h5>
+                    </li>
+                    <li class="art_item">
+                        <a href=""><img src="" alt="1"></a>                        
+                        <h5></h5>
+                    </li>
+                    <li class="art_item">
+                        <a href=""><img src="" alt="1"></a>                        
+                        <h5></h5>
+                    </li>
+                    <li class="art_item">
+                        <a href=""><img src="" alt="1"></a>                        
+                        <h5></h5>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bottom Player -->
+    <div class="bottom">
+        <!-- playing song info -->
+        <div class="songInfo">
+            <img src="../../Assets/Z23b.gif" alt="playing" height="30px" id="gif">
+            <img alt="" id="poster_master_play" height="40px" width="40px">
+            <h5 id="masterSongName">
+                <div class="subtitle"></div>
+            </h5>
+        </div>
+
+        <!-- control icons -->
+        <div class="icons">
+            <i class="fa-solid fa-music shuffle">next</i>
+            <i class="fas  fa-step-backward" id="back"></i>
+            <i class="fas fa-2x fa-play-circle" id="masterPlay"></i>
+            <i class="fas  fa-step-forward" id="next"></i>
+            <a href="" download id="downloadMusic"><i class="fa-solid fa-cloud-arrow-down"></i></a>
+        </div>
+
+        <!-- progress bar -->
+        <span id="currentStart"></span>
+        <div class="bar">
+            <input type="range" id="seek" min="0" max="100" value="0">
+            <div class="bar2" id="bar2"></div>
+            <div class="dot"></div>
+        </div>
+        <span id="currentEnd"></span>
+
+        <!-- volume bar -->
+        <div class="vol">
+            <i class="fa-solid fa-volume-high" id="vol_icon"></i>
+            <input type="range" name="range" id="vol" min="0" max="100" value="100">
+            <div class="dot" id="vol_dot"></div>
+            <div class="vol_bar"></div>
+        </div>
+
+    </div>
+
+    <!-- MODAL -->
+    <script src="../../Artists_link/charlie/charlie_puth.js"></script>
+    <script src="https://kit.fontawesome.com/54b6994b08.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

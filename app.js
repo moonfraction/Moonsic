@@ -15,7 +15,7 @@ const songs = [
     {
         id: 1,
         name: `Gerua<br>
-        <div class="subtitle">Arjit Singh, Antara Mitra</div>` ,
+        <div class="subtitle">Arijit Singh, Antara Mitra</div>` ,
         path: 'Assets/pop_songs/songs/2.mp3',
         coverPath: 'Assets/pop_songs/cover/2.jpg',
     },
@@ -57,7 +57,7 @@ const songs = [
     {
         id: 7,
         name: `Chaleya<br>
-        <div class="subtitle">Arjit Singh, Shilpa Rao</div>` ,
+        <div class="subtitle">Arijit Singh, Shilpa Rao</div>` ,
         path: 'Assets/pop_songs/songs/8.mp3',
         coverPath: 'Assets/pop_songs/cover/8.jpg',
     },
@@ -148,7 +148,27 @@ const songs = [
         path: 'Assets/songs/10.mp3',
         coverPath: 'Assets/Cover/10.jpg',
     },
+    {
+        id: 20,
+        name: `Be Intehaan<br>
+        <div class="subtitle">Pritam, Atif Aslam, Sunidhi Chauhan</div>` ,
+        path: 'Assets/songs/11.mp3',
+        coverPath: 'Assets/Cover/11.jpg',
+    },
 ]
+
+
+let contentSong = document.getElementsByClassName('content')[0].getElementsByTagName('button')[0];
+contentSong.addEventListener('click', () => {
+    index = 10;
+    music.src = songs[index].path;
+    music.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+    masterSongInfoUpdate();
+    stylePlayingTab();
+    setDownload();
+})
 
 
 //add song name and cover image to each pop_item
@@ -260,6 +280,7 @@ const setDownload = () => {
     });
     songTitles.forEach(elss => {
         masterSongName.innerHTML = elss.name;
+        downloadMusic.href = elss.path;
         downloadMusic.setAttribute('download', elss.name);
     });
 }
@@ -562,62 +583,68 @@ music.addEventListener('ended', () => {
 
 let artists = [
     {
+        id: 0,
+        name: `Atif Aslam`,
+        coverPath: 'Assets/Artist/atif_aslam.jpg',
+        path: 'Artists_link/atif/atif_aslam.html',
+    },
+    {
         id: 1,
         name: `Ed Sheeran`,
         coverPath: 'Assets/Artist/ed_sheeran.jpg',
-        path: 'Assets/Artist/ed_sheeran.html',
+        path: 'Artists_link/ed/ed_sheeran.html',
     },
     {
         id: 2,
         name: `Charlie Puth`,
         coverPath: 'Assets/Artist/charlie_puth.jpeg',
-        path: 'Assets/Artist/charlie_puth.html',
+        path: 'Artists_link/charlie/charlie_puth.html',
     },
     {
         id: 3,
-        name: `Arjit Singh`,
+        name: `Arijit Singh`,
         coverPath: 'Assets/Artist/arjit_singh.jpeg',
-        path: 'Assets/Artist/arjit_singh.html',
+        path: 'Artists_link/arijit/arijit_singh.html',
     },
     {
         id: 4,
         name: `Taylor Swift`,
         coverPath: 'Assets/Artist/taylor_swift.jpg',
-        path: 'Assets/Artist/taylor_swift.html',
+        path: 'Artists_link/taylor/taylor_swift.html',
     },
     {
         id: 5,
         name: `The Chainsmokers`,
         coverPath: 'Assets/Artist/the_chainsmokers.jpg',
-        path: 'Assets/Artist/the_chainsmokers.html',
+        path: 'Artists_link/chainsmokers/the_chainsmokers.html',
     },
 
     {
         id: 6,
         name: `Shawn Mendes`,
         coverPath: 'Assets/Artist/shawn_mendes.jpg',
-        path: 'Assets/Artist/shawn_mendes.html',
+        path: 'Artists_link/shawn/shawn_mendes.html',
+    },
+    {
+        id:7,
+        name: `Camila Cabello`,
+        coverPath: 'Assets/Artist/Camila_Cabello.png',
+        path: 'Artists_link/camila/camila_cabello.html',
     },
 
     {
-        id: 7,
-        name: `Pritam`,
-        coverPath: 'Assets/Artist/pritam.jpeg',
-        path: 'Assets/Artist/pritam.html',
-    },
-    {
         id: 8,
-        name: `Atif Aslam`,
-        coverPath: 'Assets/Artist/atif_aslam.jpg',
-        path: 'Assets/Artist/atif_aslam.html',
+        name: `One Direction`,
+        coverPath: 'Assets/Artist/one_direction.jpg',
+        path: 'Artists_link/one/one_direction.html',
     },
     {
         id: 9,
-        name: `One Direction`,
-        coverPath: 'Assets/Artist/one_direction.jpg',
-        path: 'Assets/Artist/one_direction.html',
+        name: `Pritam`,
+        coverPath: 'Assets/Artist/pritam.jpeg',
+        path: 'Artists_link/pritam/pritam.html',
     },
-
+    
 
 ]
 

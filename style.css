@@ -68,6 +68,9 @@ nav ul li span{
     background: rgba(39, 146, 218, 1);
     border-radius: 5px;
 }
+nav ul a{
+    text-decoration: none;
+}
 
 
 .search{
@@ -206,11 +209,11 @@ nav ul li span{
 }
 
 .container h1 {
-    color: black;
+    color: rgb(4, 200, 184);
     text-shadow: 2px 2px 20px rgb(137, 179, 241);
     font-family: 'Signika', sans-serif;
     font-size: 20px;
-    margin: 15px 0 0 20px;
+    margin: 25px 0 0 20px;
     font-weight: 600;
     font-size: x-large;
 }
@@ -439,11 +442,11 @@ nav ul li span{
     background: none;
     color: #36e3ec;
 }
-.player .content .buttons button:nth-child(2){
+.player .content .buttons a button{
     background: none;
     color: #36e3ec;
 }
-.player .content .buttons button:nth-child(2):hover{
+.player .content .buttons a button:hover{
     background: #36e3ec;
     color: white;
 }

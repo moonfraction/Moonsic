@@ -1,0 +1,129 @@
+
+/*login & signup styling*/
+
+header{
+    width: 100%;
+    height: 97.5vh;
+    background: #7462ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .left_bx1{
+    position: relative;
+    height: 100%;
+    background: #7462ff;
+    width: 35%;
+    background:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+header .right_bx1 {
+    position: relative;
+    width:65%;
+    height: 100%;
+    background: navy;
+    /* border: 1px solid white; */
+}
+
+.login_content{
+    width: 80%;
+    height: auto;
+    /* border: 1px solid black; */
+    padding:25px 20px;
+    background: white;
+}
+.login_content .login_card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+.login_content .login_card label{
+    font-size: 15px;
+    font-weight: 300;
+}
+.login_content .login_card input{
+    width: 94%;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    background: rgb(238, 238, 238);
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px 1px rgb(0, 0, 0, 0.2);
+    margin-top: 3px;
+
+}
+.login_content .submit{
+    margin-top: 20px;
+    padding: 8px 20px;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.1s linear;
+}
+.login_content .submit:hover{
+    background: #36e3ec;
+    color: navy;
+    box-shadow: #36e3ec 0 0 10px 1px;
+    /* border: 1px solid black; */
+    scale: 1.05;
+}
+
+.login_content .check{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: small;
+    font-weight: 100;
+}
+.login_content .check span{
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: 100;
+}
+.login_content p{
+    margin-top: 90px;
+    font-size: small;
+    font-weight: 100;
+    text-align: center;
+}
+.login_content p a{
+    margin-left: 5px;
+    text-decoration: none;
+    color: #5adae0;
+    font-weight: 600;
+}
+
+
+header .right_bx1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .right_bx1 .laptop{
+    height: 100%;
+    /* width: 100%; */
+}
+
+
+header .right_bx1 h3{
+    position: absolute;
+    background: #5adae0;
+    color: rgb(255, 102, 0);
+    right: 0;
+    bottom: 20px;
+    padding: 3px 10px;
+    border-radius: 5px 0 0 5px;
+    font-weight: 100;
+
+}

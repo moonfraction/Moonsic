@@ -21,7 +21,7 @@ nav {
     display: flex;
     align-items: center;
     z-index: 1;
-    background-color:rgba(10, 0, 77, 0.8);
+    background :linear-gradient(150deg,  black 10%, rgba(10, 0, 77, 0.8) 50%);
 }
 
 
@@ -172,32 +172,6 @@ nav ul li span{
     opacity: 0.8;
     transition: opacity 1s ease-in;
 }
-
-.dynamicColor {
-    position: absolute;
-    top: 0;
-    z-index: -3;
-    opacity: 1;
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(45deg, #d84b99, #d2001a, #450c41, #c224e6, #7462ff, #23d5ab, #f2db7d);
-    background-size: 300% 300%;
-    animation: color 5s linear infinite;
-}
-@keyframes color {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 /*background styling ends*/
 
 
@@ -306,6 +280,7 @@ nav ul li span{
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     height: 100%;
     margin-top: 20px;
     padding: 5px;
@@ -330,13 +305,14 @@ nav ul li span{
     transition: all 0.2s ease-in;
 }
 .songItem:hover {
-    background-color: rgba(39, 146, 218, 1);
+    /* background-color: rgba(39, 146, 218, 1); */
     box-shadow: 0 0 10px 2px #FFECD6;
     transform: scale(1.05);
 }
+/*
 .songItem:hover h5 .subtitle{
     color:  black;
-}
+} */
 
 .songItem img {
     height: 30px;
@@ -561,7 +537,8 @@ nav ul li span{
 h5{
     font-size: 12px;
     font-weight: 200;
-    width: 100px;
+    min-width: 100px;
+    width: 50%;
     color: white;
     /* margin: 5px; */
     text-align: center;
@@ -607,6 +584,8 @@ h5 .subtitle{
     transition: 0.3s  linear;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
     /* border: 1px solid white; */
 }
@@ -626,7 +605,12 @@ h5 .subtitle{
     width: 100px;
     height: 100px;
 }
+.player .popular_artists .items li i{
+    position: relative;
+    align-items: center;
 
+
+}
 /*popular songs and artists styling ends*/
 
 

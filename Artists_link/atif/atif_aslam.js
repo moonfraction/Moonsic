@@ -3,6 +3,11 @@ const music = new Audio('../../Assets/Artist/atif/songs/1.mp3');
 // music.play(); Autoplay is off by default
 const playingArtist = 0;
 
+var preloader = document.getElementById('loading');
+function myFunction() {
+    preloader.style.display = 'none';
+}
+
 const songs = [
 
     // pop_songs have ids 0 to 9

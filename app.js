@@ -1,6 +1,10 @@
 const music = new Audio('Assets/pop_songs/songs/1.mp3');
 // music.play(); Autoplay is off by default
 
+var preloader = document.getElementById('loading');
+function myFunction() {
+    preloader.style.display = 'none';
+}
 
 const songs = [
 
